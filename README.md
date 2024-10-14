@@ -1,14 +1,19 @@
 # FPS-for-all
 ## FPS for all: Người Khuyết Tật Cũng Xứng Đáng Với Aim Assistant Hàng Đầu Từ Arduino
 🫵 Bạn muốn chinh phục game FPS, tuy nhiên đối thủ quá mạnh?
+
 🫵 Bạn bè bạn bắn quá hay, và bạn đã quá chán với điều này?
+
 🫵 Bạn muốn chơi game, nhưng bạn không có tay (phải)?
 
 Bỏ chuột xuống đi, chúng ta có Aim Assistant rồi! - FPS bình đẳng cho tất cả, ngay cả khi bạn không có tay phải! 😱
 
 💥 Đừng lo! Giải pháp của chúng tôi giúp bạn chơi game với hiệu suất đỉnh cao, dù bạn có gặp bất kỳ trở ngại nào!
+
 🔥 Aim Assistant tích hợp AI thông minh: tự động khóa mục tiêu với độ chính xác tuyệt đối, biến bạn thành tay thiện xạ chỉ trong tích tắc!
+
 🕹️ Cảm biến chuyển động tiên tiến: Điều khiển dễ dàng chỉ với một vài cử động đầu, giúp bạn giữ sự thoải mái trong suốt trận chiến.
+
 🚀 Trải nghiệm FPS mượt mà: Không còn lo ngại về kỹ năng hoặc khả năng vật lý – mọi người đều có thể chơi và giành chiến thắng!
 
 ⚠️ Lưu ý: Ứng dụng tạo ra với mục đích học tập, không phải để hack cheat game.
