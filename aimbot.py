@@ -3,9 +3,11 @@ import mss
 import numpy as np
 from ultralytics import YOLO
 import mousekey
+from pynput import keyboard
 import pyautogui
 is_q_pressed = False
-def on_press(key):
+
+def on_release(key):
     global is_q_pressed
     try:
         if key.char == 'q' and is_q_pressed == False:
@@ -14,13 +16,10 @@ def on_press(key):
             is_q_pressed = False
     except AttributeError:
         pass
-def on_release(key):
-    global is_q_pressed
-    try:
-        e = 0
-    except AttributeError:
-        pass
-monitor = {"top": 220, "left": 640, "width": 640, "height": 640}
+listener = keyboard.Listener(on_release=on_release)
+listener.start()
+screen_width, screen_height = pyautogui.size()
+monitor = {"top": (int)((screen_height - 640)/2), "left": (int)((screen_width - 640)/2), "width": 640, "height": 640}
 model = YOLO("best2.pt").to('cuda')
 model2 = YOLO("best.pt").to('cuda')
 area_threshold = 2500
@@ -33,42 +32,30 @@ with mss.mss() as sct:
             results = model(img, conf=0.5)
         else:
             results = model2(img, conf=0.5)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-        if len(results[0].boxes) > 0:
+        if len(results[0].boxes):
+            print(dir(results[0].boxes[0]))
             boxes_near = []
             boxes_far = []
             current_pos = pyautogui.position()
             
             for box in results[0].boxes:
-                x1, y1, x2, y2 = box.xyxy[0].cpu().numpy() 
+                x1, y1, x2, y2 = box.xyxy[0].cpu().numpy()
                 area = (x2 - x1) * (y2 - y1)
-                print(area)
                 bbox_center_x = int((x1 + x2) / 2)
                 bbox_center_y = int((y1 + y2) / 2)
-                
-                # Tính khoảng cách từ con trỏ chuột tới trung tâm của bounding box
-                distance = np.sqrt((bbox_center_x - current_pos.x) ** 2 + (bbox_center_y - current_pos.y) ** 2)
-
-                # Chia vật thể thành 2 nhóm: gần và xa
+                distance = (bbox_center_x - current_pos.x) ** 2 + (bbox_center_y - current_pos.y) ** 2
                 if area > area_threshold:
                     boxes_near.append((box, distance))
                 else:
                     boxes_far.append((box, distance))
-
-            # Sắp xếp theo khoảng cách (gần nhất trước)
             if boxes_near:
-                boxes_near.sort(key=lambda x: x[1])  # Sắp xếp theo khoảng cách
-                selected_box = boxes_near[0][0]  # Chọn vật thể gần nhất
+                selected_box = min(boxes_near, key=lambda x: x[1])[0]  # Box gần nhất
             else:
-                boxes_far.sort(key=lambda x: x[1])  # Sắp xếp theo khoảng cách
-                selected_box = boxes_far[0][0]  # Chọn vật thể xa nhất nếu không có vật thể gần
-
+                selected_box = min(boxes_far, key=lambda x: x[1])[0]  # Box xa nhất
             # Lấy tọa độ vật thể được chọn
             x1, y1, x2, y2 = selected_box.xyxy[0].cpu().numpy()
-            bbox_center_x = int((x1 + x2) / 2) + 640
-            bbox_center_y = int((y1 + y2) / 2) + 220
+            bbox_center_x = int((x1 + x2) / 2) + monitor["left"]
+            bbox_center_y = int((y1 + y2) / 2) + monitor["top"]
 
             # Di chuyển chuột
             mousekey.move_rel((int)((bbox_center_x - current_pos.x) / 6), (int)((bbox_center_y - current_pos.y) / 6))
-    cv2.destroyAllWindows()
