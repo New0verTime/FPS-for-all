@@ -29,9 +29,10 @@ Dự án gồm yêu cầu khá nhiều về phần cứng. Bạn cần chuẩn b
  - Về Arduino, bạn lắp như sau:
 <table style="padding:10px">
   <tr>
-    <td width="100%"><img src="image/sample.jpg"/></td>
+    <td width="100%"><img src="image/Untitled.png" style="transform: rotate(-90deg);"/></td>
   </tr>
 </table>
+
  - Bạn cũng có thể tham khảo link sau: [link](https://arduinokit.vn/huong-dan-su-dung-cam-bien-gia-toc-mpu6050-voi-arduino/).
  - Sau khi lắp đặt, bạn cần tải ArduinoIDE, mở file MPU6050.ino, cài các thư viện được sử dụng, compile và truyền data vào mạch
  - Bạn cần hiệu chỉnh các giá trị của cảm biến bằng cách sử dụng SerialMonitor. (Hiệu chỉnh các tham số của Kalman filter và công thức tính vx, vy).
