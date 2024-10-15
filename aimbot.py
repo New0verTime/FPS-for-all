@@ -44,7 +44,6 @@ with mss.mss() as sct:
             x1, y1, x2, y2 = selected_box.xyxy[0].cpu().numpy()
             bbox_center_x = int((x1 + x2) / 2)
             bbox_center_y = int((3*y1 + y2) / 4)
-            print(d)
             if d < 7000:
                 mousekey.move_rel((int)((bbox_center_x - current_posx) / 5.5), (int)((bbox_center_y - current_posy) / 5.5))
             elif d < 70000:
