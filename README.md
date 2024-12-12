@@ -60,4 +60,5 @@ Chúng ta có 2 file là aimbot.py và arduino.py. Mỗi file có 1 tác dụng 
 
 ## Gameplay
 Preview of Object Detection: [link](https://www.youtube.com/watch?v=q1EYzm-0Jjo)
+
 Preview of Aim Assistant: [link](https://www.youtube.com/watch?v=AWstyUH8ScE)
