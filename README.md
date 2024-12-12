@@ -19,7 +19,7 @@ Bỏ chuột xuống đi, chúng ta có Aim Assistant rồi! - FPS bình đẳng
 ⚠️ Lưu ý: Ứng dụng tạo ra với mục đích học tập, không phải để hack cheat game.
 ## Train Model
 ### Train File Structure
-'''
+```
 Train
 ├── train
 │ ├── images
@@ -30,7 +30,7 @@ Train
 ├── data.yaml
 ├── train.py
 └── yolo11n.pt
-'''
+```
 ### Train
 Run train.py
 ## Setup
