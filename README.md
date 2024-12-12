@@ -17,6 +17,13 @@ Bỏ chuột xuống đi, chúng ta có Aim Assistant rồi! - FPS bình đẳng
 🚀 Trải nghiệm FPS mượt mà: Không còn lo ngại về kỹ năng hoặc khả năng vật lý – mọi người đều có thể chơi và giành chiến thắng!
 
 ⚠️ Lưu ý: Ứng dụng tạo ra với mục đích học tập, không phải để hack cheat game.
+
+## Environment requirement
+1. Install requirements:
+   ```bash
+   pip install -r requirements.txt
+2. Install pytorch: https://pytorch.org/
+
 ## Train Model
 ### Train File Structure
 ```
