@@ -56,7 +56,8 @@ Dự án gồm yêu cầu khá nhiều về phần cứng. Bạn cần chuẩn b
 ## Run!
 Chúng ta có 2 file là aimbot.py và arduino.py. Mỗi file có 1 tác dụng riêng. Về cơ bản, bạn chỉ cần bật file aimbot.py và chạy. File Arduino sẽ được sử dụng khi bạn dùng arduino điều khiển chuột.
  - aimbot.py là aimbot.
- - arduino.py là file để cảm biến bằng arduino giúp điều khiển chuột.
+ - arduino.py là file để chạy cảm biến bằng arduino giúp điều khiển chuột.
 
 ## Gameplay
-[link](https://www.youtube.com/watch?v=ha3DBLeQu1A)
+Preview of Object Detection: [link](https://www.youtube.com/watch?v=q1EYzm-0Jjo)
+Preview of Aim Assistant: [link](https://www.youtube.com/watch?v=AWstyUH8ScE)
