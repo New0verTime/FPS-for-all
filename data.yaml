@@ -1,0 +1,13 @@
+train: E:/Tuong tac nguoi may/model/New folder (3)/train/images
+val: E:/Tuong tac nguoi may/model/New folder (3)/valid/images
+test: E:/Tuong tac nguoi may/model/New folder (3)/test/images
+
+nc: 1
+names: ['Red-enemy']
+
+roboflow:
+  workspace: yoloarsenal
+  project: arsenalenemyhighlightred
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yoloarsenal/arsenalenemyhighlightred/dataset/2
