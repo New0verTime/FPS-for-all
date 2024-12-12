@@ -18,6 +18,10 @@ Bỏ chuột xuống đi, chúng ta có Aim Assistant rồi! - FPS bình đẳng
 
 ⚠️ Lưu ý: Ứng dụng tạo ra với mục đích học tập, không phải để hack cheat game.
 
+### Preview image:
+   ![Preview Image](Preview.png)
+
+   
 ## Environment requirement
 1. Install requirements:
    ```bash
