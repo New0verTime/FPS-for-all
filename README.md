@@ -17,6 +17,21 @@ Bỏ chuột xuống đi, chúng ta có Aim Assistant rồi! - FPS bình đẳng
 🚀 Trải nghiệm FPS mượt mà: Không còn lo ngại về kỹ năng hoặc khả năng vật lý – mọi người đều có thể chơi và giành chiến thắng!
 
 ⚠️ Lưu ý: Ứng dụng tạo ra với mục đích học tập, không phải để hack cheat game.
+## Train Model
+### Train File Structure
+
+Cam2BEV
+├── train
+│ ├── images
+│ └── labels
+├── valid
+│ ├── images
+│ └── labels
+├── data.yaml
+├── train.py
+└── yolo11n.pt
+### Train
+Run train.py
 ## Setup
 ### Yêu cầu
 Dự án gồm yêu cầu khá nhiều về phần cứng. Bạn cần chuẩn bị:
