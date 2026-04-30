@@ -1,22 +1,22 @@
 # 🔥🔥🔥 FPS-for-all 🔥🔥🔥
-## FPS for all: Người Khuyết Tật Cũng Xứng Đáng Với Aim Assistant Hàng Đầu Từ Arduino 🔥🔥🔥
-🫵 Bạn muốn chinh phục game FPS, tuy nhiên đối thủ quá mạnh?
+## FPS for All: Assistive Aim Assistant for People with Disabilities using Arduino 🔥🔥🔥
+🫵 Do you want to play FPS games but feel outmatched by stronger opponents?
 
-🫵 Bạn bè bạn bắn quá hay, và bạn đã quá chán với điều này?
+🫵 Are your friends much better at aiming, and you're tired of falling behind?
 
-🫵 Bạn muốn chơi game, nhưng bạn không có tay (phải)?
+🫵 Do you want to play, but have limited use of your right hand?
 
-Bỏ chuột xuống đi, chúng ta có Aim Assistant rồi! - FPS bình đẳng cho tất cả, ngay cả khi bạn không có tay phải! 😱
+Put the mouse down — we’ve got an Aim Assistant! Equal FPS experience for everyone, even without a right hand! 😱
 
-💥 Đừng lo! Giải pháp của chúng tôi giúp bạn chơi game với hiệu suất đỉnh cao, dù bạn có gặp bất kỳ trở ngại nào!
+💥 Don’t worry! Our system helps you achieve high performance regardless of physical limitations.
 
-🔥 Aim Assistant tích hợp AI thông minh: tự động khóa mục tiêu với độ chính xác tuyệt đối, biến bạn thành tay thiện xạ chỉ trong tích tắc!
+🔥 AI-powered Aim Assistant: Automatically detects and aligns targets with high accuracy using computer vision.
 
-🕹️ Cảm biến chuyển động tiên tiến: Điều khiển dễ dàng chỉ với một vài cử động đầu, giúp bạn giữ sự thoải mái trong suốt trận chiến.
+🕹️ Motion-based Control: Control the cursor using simple head movements with motion sensors, ensuring comfort during gameplay.
 
-🚀 Trải nghiệm FPS mượt mà: Không còn lo ngại về kỹ năng hoặc khả năng vật lý – mọi người đều có thể chơi và giành chiến thắng!
+🚀 Smooth FPS Experience: No need to worry about skill gaps or physical constraints — everyone can play and compete!
 
-⚠️ Lưu ý: Ứng dụng tạo ra với mục đích học tập, không phải để hack cheat game.
+⚠️ Note: This project is developed for educational purposes only. It is not intended for cheating or unfair gameplay.
 
 ### Preview image:
    ![Preview Image](Preview.png)
@@ -45,29 +45,28 @@ Train
 ### Train
 Run train.py
 ## Setup
-### Yêu cầu
-Dự án gồm yêu cầu khá nhiều về phần cứng. Bạn cần chuẩn bị:
- - 1 laptop cấu hình ổn (Nvidia 4050)
- - Arduino Uno R3
- - Cảm biến MPU6050
- - Dây cắm đực-đực
- - Breadboard
-### Cài đặt
- - Về Arduino, bạn lắp như sau:
+### Hardware Requirements
+This project requires several hardware components:
+
+A laptop with a decent GPU (e.g., Nvidia RTX 4050)
+Arduino Uno R3
+MPU6050 sensor (gyroscope + accelerometer)
+Male-to-male jumper wires
+Breadboard
+
+### Installation
+ - Connect the Arduino and MPU6050 as shown below:
 <table style="padding:10px">
   <tr>
     <td width="100%"><img src="image/Untitled.png" style="transform: rotate(-90deg);"/></td>
   </tr>
 </table>
 
- - Bạn cũng có thể tham khảo link sau: [link](https://arduinokit.vn/huong-dan-su-dung-cam-bien-gia-toc-mpu6050-voi-arduino/).
- - Sau khi lắp đặt, bạn cần tải ArduinoIDE, mở file MPU6050.ino, cài các thư viện được sử dụng, compile và truyền data vào mạch
- - Bạn cần hiệu chỉnh các giá trị của cảm biến bằng cách sử dụng SerialMonitor. (Hiệu chỉnh các tham số của Kalman filter và công thức tính vx, vy).
+ - After wiring: Install Arduino IDE, open MPU6050.ino, install required libraries, compile and upload to the board
+ - Calibrate the sensor using Serial Monitor.
 
 ## Run!
-Chúng ta có 2 file là aimbot.py và arduino.py. Mỗi file có 1 tác dụng riêng. Về cơ bản, bạn chỉ cần bật file aimbot.py và chạy. File Arduino sẽ được sử dụng khi bạn dùng arduino điều khiển chuột.
- - aimbot.py là aimbot.
- - arduino.py là file để chạy cảm biến bằng arduino giúp điều khiển chuột.
+There are two main files. aimbot.py to handles object detection and aim assistance, arduino.py to reads sensor data and controls mouse movement with your head
 
 ## Gameplay
 Preview of Object Detection: [link](https://www.youtube.com/watch?v=q1EYzm-0Jjo)
